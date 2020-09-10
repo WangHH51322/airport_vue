@@ -1,0 +1,31 @@
+{"mxGraphModel":
+    {"root":
+        {"mxCell":
+            [
+                {"_id":"0"},
+                {"_id":"1","_parent":"0"},
+                {"mxGeometry":
+                    {"_x":"62","_y":"79","_width":"20","_height":"30","_as":"geometry"},
+                    "_id":"4","_style":"shape=supply;fillColor=red;strokeColor=blue",
+                    "_vertex":"1", "_parent":"1"
+                },
+                {"mxGeometry":
+                    {"_x":"190","_y":"83","_width":"40","_height":"5","_as":"geometry"},
+                    "_id":"5","_style":"shape=pipe;fillColor=red;strokeColor=blue",
+                    "_vertex":"1","_parent":"1"},
+                {"mxGeometry":
+                    {"_relative":"1","_as":"geometry"},
+                    "_id":"6", "_style":"exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;",
+                    "_edge":"1","_parent":"1","_source":"4","_target":"5"},
+                {"mxGeometry":
+                    {"_x":"332","_y":"78","_width":"25","_height":"25","_as":"geometry"},
+                    "_id":"7","_style":"shape=pump;fillColor=rgb(100, 255, 0);strokeColorrgb(100, 255, 0)",
+                    "_vertex":"1","_parent":"1"},
+                {"mxGeometry":
+                    {"_relative":"1","_as":"geometry"},
+                    "_id":"8","_style":"exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;",
+                    "_edge":"1","_parent":"1","_source":"5","_target":"7"}
+            ]
+        }
+    }
+}

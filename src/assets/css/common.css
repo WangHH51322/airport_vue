@@ -1,0 +1,23 @@
+.flex{
+  display: flex;
+}
+.flex-col{
+  /* flex-direction 属性规定灵活项目的方向。 */
+  flex-direction: column;
+}
+.j-center{
+  justify-content: center;
+}
+.a-center{
+  align-items: center;
+}
+.j-bt{
+  justify-content: space-between;
+}
+.flex-1{
+  flex:1;
+}
+/*不要选中*/
+.no-selected{
+  user-select: none;
+}

@@ -1,0 +1,30 @@
+{
+  "id": "1676187",
+  "name": "demo02",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "438500",
+      "name": "hk_quit",
+      "font_class": "hkquit",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "7605160",
+      "name": "quit",
+      "font_class": "quit",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "1200228",
+      "name": "users",
+      "font_class": "users",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    }
+  ]
+}
