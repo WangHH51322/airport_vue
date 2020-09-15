@@ -7,6 +7,7 @@ import projectManagement from '../views/1projectManagement/projectManagement.vue
 
 // 引入基础数据模块
 import basicDataUnit from "../views/2basicData/basicDataUnit";
+import PhysicalQuantityUnit from "../views/2basicData/PhysicalQuantityUnit";
 import basicData from '../views/2basicData/basicData.vue'
 import basicData1 from '../views/2basicData/basicData1.vue'
 import basicDataFluid from '../views/2basicData/basicDataFluid.vue'
@@ -54,8 +55,9 @@ const router = new VueRouter({
         {path: 'basicData',component:basicData,meta: {title: '基础数据'},
           children:[
               {path: 'basicDataUnit',component:basicDataUnit,meta: {title: '基础数据-单位'}},
+              {path: 'PhysicalQuantityUnit',component:PhysicalQuantityUnit,meta: {title: '基础数据-物理量单位配置'}},
               {path: 'fluidList',component:fluidList,meta: {title: '基础数据-流体'}},
-              {path: 'fluidList',component:basicDataFluid,meta: {title: '基础数据-流体'}},
+              //{path: 'fluidList',component:basicDataFluid,meta: {title: '基础数据-流体'}},
               {path: 'basicDataPipe',component:basicDataPipe,meta: {title: '基础数据-管材'}},
               {path: 'updata',component:updata,meta: {title: '基础数据-更新'}},
               {path: 'adddata',component:adddata,meta: {title: '基础数据-添加'}},
