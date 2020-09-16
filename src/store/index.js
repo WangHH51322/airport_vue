@@ -4,6 +4,7 @@ import graphInfo from './graphInfo'
 import projectList from './projectList'
 import steady from './steady'
 import pageStatus from './pageStatus'
+import guideModelPageChange from './guideModelPageChange'
 import basicData from './basicData'
 Vue.use(Vuex)
 
@@ -16,6 +17,7 @@ export default new Vuex.Store({
         steady,
         pageStatus,
         projectList,
+        guideModelPageChange,
         basicData
     }
 })

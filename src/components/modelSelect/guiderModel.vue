@@ -23,16 +23,7 @@
       <el-divider></el-divider>
     </el-row>
     <el-row>
-      <el-col :span="4">
-        <el-card>
-          这里显示菜单
-        </el-card>
-      </el-col>
-      <el-col :span="20">
-        <el-card>
-          这里是主显示区
-        </el-card>
-      </el-col>
+        <router-view></router-view>
     </el-row>
   </el-container>
 </template>
@@ -41,21 +32,32 @@
   export default {
     name: "modelGuide",
     data() {
-      return {active: 0}
+      return {
+        // active: this.$store.state.guideModelPageChange.currentPage.active,
+        active:0,
+        // path: this.$store.state.guideModelPageChange.currentPage.pageNumber,
+      }
     },
     methods: {
       next() {
         if (this.active < 9) {
-          console.log('下一步')
-          this.active++
+          console.log('下一步');
+          this.active++;
+          //this.$store.commit('guideModelPageChange/nextPage')
+          console.log(123);
+          console.log(this.active);
+          //console.log(this.path);
+          this.$router.push('/guideModelPage' + String(this.active + 1) );
         } else {
           alert('已经完成最后一步!!!');
         }
       },
       before() {
         if (this.active > 0){
-          console.log('上一步')
-          this.active--
+          console.log('上一步');
+          console.log('/guideModelPage' + String(this.active));
+          this.$router.push('/guideModelPage' + String(this.active));
+          this.active--;
         }else {
           alert('已经回到第一步!!!');
         }

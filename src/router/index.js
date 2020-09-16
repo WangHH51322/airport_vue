@@ -6,6 +6,16 @@ import mainzy from '../views/mainzy'
 import pageHeaderAndFooter from "../components/default/pageHeaderAndFooter";
 import modelPage from "../components/modelSelect/modelPage";
 import guiderModel from "../components/modelSelect/guiderModel";
+import guideModelPage1 from "../components/guideModelPage/guideModelPage1";
+import guideModelPage2 from "../components/guideModelPage/guideModelPage2";
+import guideModelPage3 from "../components/guideModelPage/guideModelPage3";
+import guideModelPage4 from "../components/guideModelPage/guideModelPage4";
+import guideModelPage5 from "../components/guideModelPage/guideModelPage5";
+import guideModelPage6 from "../components/guideModelPage/guideModelPage6";
+import guideModelPage7 from "../components/guideModelPage/guideModelPage7";
+import guideModelPage8 from "../components/guideModelPage/guideModelPage8";
+import guideModelPage9 from "../components/guideModelPage/guideModelPage9";
+import guideModelPage10 from "../components/guideModelPage/guideModelPage10";
 
 //引入项目管理模块
 import projectManagement from '../views/1projectManagement/projectManagement.vue'
@@ -56,7 +66,21 @@ const router = new VueRouter({
     {path:'/pageHeaderAndFooter',name: 'pageHeaderAndFooter',component:pageHeaderAndFooter,
       children: [
         {path:'',name:'modelPage',component:modelPage},
-        {path:'/guiderModel',name:'guiderModel',component:guiderModel},
+        {path:'/guiderModel',name:'guiderModel',component:guiderModel,
+          children: [
+            {path:'',name:'guideModelPage1',component:guideModelPage1},
+            {path:'/guideModelPage1',name:'guideModelPage1',component:guideModelPage1},
+            {path:'/guideModelPage2',name:'guideModelPage2',component:guideModelPage2},
+            {path:'/guideModelPage3',name:'guideModelPage3',component:guideModelPage3},
+            {path:'/guideModelPage4',name:'guideModelPage4',component:guideModelPage4},
+            {path:'/guideModelPage5',name:'guideModelPage5',component:guideModelPage5},
+            {path:'/guideModelPage6',name:'guideModelPage6',component:guideModelPage6},
+            {path:'/guideModelPage7',name:'guideModelPage7',component:guideModelPage7},
+            {path:'/guideModelPage8',name:'guideModelPage8',component:guideModelPage8},
+            {path:'/guideModelPage9',name:'guideModelPage9',component:guideModelPage9},
+            {path:'/guideModelPage10',name:'guideModelPage10',component:guideModelPage10},
+          ]
+        },
         {path: '/mainzy',component: mainzy,
           children: [
             {path: '',component: projectManagement,meta: {title: '项目管理'}},

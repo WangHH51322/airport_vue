@@ -25,11 +25,6 @@
           </el-dropdown-menu>
         </el-dropdown>
       </el-col>
-
-
-
-
-
     </el-header>
     <el-container style="margin-top: -5px">
       <!--这里是主显示区-->
