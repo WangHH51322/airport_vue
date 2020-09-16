@@ -38,6 +38,9 @@
         // path: this.$store.state.guideModelPageChange.currentPage.pageNumber,
       }
     },
+    mounted() {
+      this.$router.push('/guideModelPage1');
+    },
     methods: {
       next() {
         if (this.active < 9) {
