@@ -2,14 +2,14 @@
   <div>
     <el-container>
       <!-- 顶部盒子 -->
-      <div class="headerBox">
-        <!-- 标题 -->
-        <span class="headerBoxLeft">项目管理</span>
-        <!-- <span class="headerBoxRight">
-                <el-button  plain class="topButton">添加项目</el-button>
-                <el-button  plain class="topButton">删除项目</el-button>
-        </span>-->
-      </div>
+<!--      <div class="headerBox">-->
+<!--        &lt;!&ndash; 标题 &ndash;&gt;-->
+<!--        <span class="headerBoxLeft">项目管理</span>-->
+<!--        &lt;!&ndash; <span class="headerBoxRight">-->
+<!--                <el-button  plain class="topButton">添加项目</el-button>-->
+<!--                <el-button  plain class="topButton">删除项目</el-button>-->
+<!--        </span>&ndash;&gt;-->
+<!--      </div>-->
     </el-container>
     <div class="content">
       <div class="innercontent">

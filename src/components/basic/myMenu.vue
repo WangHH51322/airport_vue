@@ -2,13 +2,13 @@
   <!-- 一级目录组件 -->
   <div class="asiseMenu">
     <!-- <Sider hide-trigger :style="{background: '#fff'}"> -->
-    <span class="logo asideTop">logo</span>
-    <span class="appName asideTop">软件名称</span>
-      <el-menu
-      default-active="2"
-      class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose">
+<!--    <span class="logo asideTop">logo</span>-->
+<!--    <span class="appName asideTop">软件名称</span>-->
+      <el-menu>
+<!--      default-active="2"-->
+<!--      class="el-menu-vertical-demo"-->
+<!--      @open="handleOpen"-->
+<!--      @close="handleClose">-->
       <el-menu-item index="1">
         <template slot="title">
           <i class="el-icon-location"></i>
@@ -83,14 +83,14 @@
       <router-link to="/validityCheck">计算结果</router-link>
     </el-button> -->
 
-    <div class="asideButtom">
-      <span class="username">
-        <el-button plain>{{user.name}}</el-button>
-      </span>
-      <span class="quit">
-        <el-button plain @click="logout">退出</el-button>
-      </span>
-    </div>
+<!--    <div class="asideButtom">-->
+<!--      <span class="username">-->
+<!--        <el-button plain>{{user.name}}</el-button>-->
+<!--      </span>-->
+<!--      <span class="quit">-->
+<!--        <el-button plain @click="logout">退出</el-button>-->
+<!--      </span>-->
+<!--    </div>-->
     <!-- </Sider> -->
   </div>
 </template>

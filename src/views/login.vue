@@ -1,4 +1,4 @@
-<template>
+<template class="header">
   <div>
     <el-form :rules="rules" :model="loginForm" ref="loginForm" class="loginContainer">
       <h3 class="loginTitle">系统登录</h3>
@@ -39,7 +39,7 @@
             this.postKeyValueRequest('/api/doLogin',this.loginForm).then(resp=>{
               if(resp){
                 window.sessionStorage.setItem("user",JSON.stringify(resp.obj)); //将后端传过来的数据放到sessionStorage里面，可以随着页面关闭删除数据
-                this.$router.replace('/mainzy')
+                this.$router.replace('/pageHeaderAndFooter')
               }
             })
             //alert('submit!');
@@ -54,13 +54,16 @@
 </script>
 
 <style>
+  /*.header{*/
+  /*  background-image: url("../assets/bgp1.jpg");*/
+  /*}*/
   .loginContainer{
     border-radius: 15px;
     background-clip: padding-box;
+    background-image: url("../assets/bgp1.jpg");
     margin:180px auto;
     width: 350px;
     padding: 15px 35px 15px 35px;
-    background: #ffffff;
     border: 1px solid #eaeaea;
     box-shadow: 0 0 25px #cac6c6;
   }

@@ -1,11 +1,11 @@
 <template>
 <!-- 基础数据--管网结构 -->
 <div>
-    <subMenu></subMenu>
+<!--    <subMenu></subMenu>-->
     <router-view></router-view>
 </div>
 
-</template>    
+</template>
 <script>
     import subMenu from '@/components/basicData/subMenu.vue'
 

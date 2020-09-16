@@ -2,6 +2,11 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import mainzy from '../views/mainzy'
 
+//引入模式选择页面
+import pageHeaderAndFooter from "../components/default/pageHeaderAndFooter";
+import modelPage from "../components/modelSelect/modelPage";
+import guiderModel from "../components/modelSelect/guiderModel";
+
 //引入项目管理模块
 import projectManagement from '../views/1projectManagement/projectManagement.vue'
 
@@ -14,7 +19,6 @@ import basicDataFluid from '../views/2basicData/basicDataFluid.vue'
 import fluidList from '../views/2basicData/fluidList.vue'
 import basicDataPipe from '../views/2basicData/basicDataPipe.vue'
 import basicDataFacility from '../views/2basicData/basicDataFacility.vue'
-
 
 // 设备模块
 import pumpParams from '../components/basicData/basicDataFacility/pumpParams.vue'
@@ -49,38 +53,44 @@ const router = new VueRouter({
 // export default new Router({
   routes: [
     {path: '/',component: () => import('@/views/login.vue'),meta: {title: '登录'}},
-    {path: '/mainzy',component: mainzy,
+    {path:'/pageHeaderAndFooter',name: 'pageHeaderAndFooter',component:pageHeaderAndFooter,
       children: [
-        {path: '',component: projectManagement,meta: {title: '项目管理'}},
-        {path: 'basicData',component:basicData,meta: {title: '基础数据'},
-          children:[
-              {path: 'basicDataUnit',component:basicDataUnit,meta: {title: '基础数据-单位'}},
-              {path: 'PhysicalQuantityUnit',component:PhysicalQuantityUnit,meta: {title: '基础数据-物理量单位配置'}},
-              {path: 'fluidList',component:fluidList,meta: {title: '基础数据-流体'}},
-              //{path: 'fluidList',component:basicDataFluid,meta: {title: '基础数据-流体'}},
-              {path: 'basicDataPipe',component:basicDataPipe,meta: {title: '基础数据-管材'}},
-              {path: 'updata',component:updata,meta: {title: '基础数据-更新'}},
-              {path: 'adddata',component:adddata,meta: {title: '基础数据-添加'}},
-              {path: 'pumpParams',component:pumpParams,meta: {title: '编辑器-泵'}},
-              {path: 'basicDataFacility',component:basicDataFacility,meta: {title: '基础数据-设备及其它'},
-                children:[
+        {path:'',name:'modelPage',component:modelPage},
+        {path:'/guiderModel',name:'guiderModel',component:guiderModel},
+        {path: '/mainzy',component: mainzy,
+          children: [
+            {path: '',component: projectManagement,meta: {title: '项目管理'}},
+            {path: 'basicData',component:basicData,meta: {title: '基础数据'},
+              children:[
+                {path: 'basicDataUnit',component:basicDataUnit,meta: {title: '基础数据-单位'}},
+                {path: 'PhysicalQuantityUnit',component:PhysicalQuantityUnit,meta: {title: '基础数据-物理量单位配置'}},
+                {path: 'fluidList',component:fluidList,meta: {title: '基础数据-流体'}},
+                //{path: 'fluidList',component:basicDataFluid,meta: {title: '基础数据-流体'}},
+                {path: 'basicDataPipe',component:basicDataPipe,meta: {title: '基础数据-管材'}},
+                {path: 'updata',component:updata,meta: {title: '基础数据-更新'}},
+                {path: 'adddata',component:adddata,meta: {title: '基础数据-添加'}},
+                {path: 'pumpParams',component:pumpParams,meta: {title: '编辑器-泵'}},
+                {path: 'basicDataFacility',component:basicDataFacility,meta: {title: '基础数据-设备及其它'},
+                  children:[
 
-                ]},
-          ]},
-          {path: 'validityCheck',component: validityCheck,meta: {title: '模型检查'},
-            children: [
-              {path: 'basicData1',component:basicData1,meta: {title: '基础数据-管网结构'}},
-            ]},
-          {path: 'steady',component: steady,meta: {title: '稳态计算'},
-          children:[
-            {path:'steadyBorder',component: steadyBorder,meta: {title: '稳态计算-边界条件'}},
-          //   {path:'steadyCalculation',component: steadyCalculation,meta:{title: '稳态计算-运行'}}
+                  ]},
+              ]},
+            {path: 'validityCheck',component: validityCheck,meta: {title: '模型检查'},
+              children: [
+                {path: 'basicData1',component:basicData1,meta: {title: '基础数据-管网结构'}},
+              ]},
+            {path: 'steady',component: steady,meta: {title: '稳态计算'},
+              children:[
+                {path:'steadyBorder',component: steadyBorder,meta: {title: '稳态计算-边界条件'}},
+                //   {path:'steadyCalculation',component: steadyCalculation,meta:{title: '稳态计算-运行'}}
 
-           ]
+              ]
+            },
+            {path: 'transient',component: transient,meta: {title: '瞬态计算'}},
+          ]
         },
-          {path: 'transient',component: transient,meta: {title: '瞬态计算'}},
-      ]
-    },
+      ]},
+
   ]
 })
 export default router
